@@ -41,13 +41,8 @@ h1{
     width: min(100%, 1000px);
 }
 .menu-toggle img{
-<<<<<<< HEAD
     height: 120px;
     border-radius: 50px;
-=======
-    height: 80px;
-    border-radius: 10px;
->>>>>>> d7cefa0fc75b9033544d695162196f6e0b0b6849
 }
 .hamburguer {
   display: block;
@@ -240,38 +235,20 @@ box-shadow: 2px 0 5px rgba(0,0,0,0.1);
     justify-content: center;
     text-align: center;
 }
-<<<<<<< HEAD
-/* ===================================================
-   CELULAR (Telas menores que 680px)
-=================================================== */
-@media (width < 680px){
-    .container-quem-somos{
-        margin: 40px auto; /* Aumentei de 20px para 40px para dar mais respiro no topo */
-        gap: 30px; /* Aumentei o espaço entre uma seção e outra */
-=======
 
 @media (width < 680px){
     .container-quem-somos{
         margin: 40px auto; 
         gap: 30px; 
->>>>>>> d7cefa0fc75b9033544d695162196f6e0b0b6849
     }
     .servico{
         flex-direction: column;
         align-items: center;
-<<<<<<< HEAD
-        padding: 30px 20px; /* Aumentei o espaço dentro do card branco */
-        text-align: center;
-    }
-    .servico img{
-        margin-bottom: 20px; /* Mais espaço entre a foto e o texto */
-=======
         padding: 30px 20px;
         text-align: center;
     }
     .servico img{
         margin-bottom: 20px;
->>>>>>> d7cefa0fc75b9033544d695162196f6e0b0b6849
         width: min(100%, 300px);
     }
     .servico-texto{
