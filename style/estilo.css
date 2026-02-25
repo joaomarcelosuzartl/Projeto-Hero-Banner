@@ -235,22 +235,20 @@ box-shadow: 2px 0 5px rgba(0,0,0,0.1);
     justify-content: center;
     text-align: center;
 }
-/* ===================================================
-   CELULAR (Telas menores que 680px)
-=================================================== */
+
 @media (width < 680px){
     .container-quem-somos{
-        margin: 40px auto; /* Aumentei de 20px para 40px para dar mais respiro no topo */
-        gap: 30px; /* Aumentei o espaço entre uma seção e outra */
+        margin: 40px auto; 
+        gap: 30px; 
     }
     .servico{
         flex-direction: column;
         align-items: center;
-        padding: 30px 20px; /* Aumentei o espaço dentro do card branco */
+        padding: 30px 20px;
         text-align: center;
     }
     .servico img{
-        margin-bottom: 20px; /* Mais espaço entre a foto e o texto */
+        margin-bottom: 20px;
         width: min(100%, 300px);
     }
     .servico-texto{

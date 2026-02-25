@@ -60,7 +60,7 @@ if(formulario){
         const botao = document.querySelector('button[type="submit"]');
         const textoOriginal = botao.textContent;
 
-        botao.textContent = 'Enviando mensagem com sucesso.';
+        botao.textContent = 'Mensagem enviada com sucesso.';
         botao.style.backgroundColor = '#28a745';
         botao.style.color = '#fff';
         botao.disabled = true;
@@ -68,7 +68,7 @@ if(formulario){
         setTimeout(() => {
             botao.textContent = textoOriginal;
             botao.style.backgroundColor = '';
-            botao.disabled = false;
+            botao.style.color = '';
         }, 3000);
     });
 }
