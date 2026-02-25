@@ -60,7 +60,11 @@ if(formulario){
         const botao = document.querySelector('button[type="submit"]');
         const textoOriginal = botao.textContent;
 
+<<<<<<< HEAD
         botao.textContent = 'Enviando mensagem com sucesso.';
+=======
+        botao.textContent = 'Mensagem enviada com sucesso.';
+>>>>>>> d7cefa0fc75b9033544d695162196f6e0b0b6849
         botao.style.backgroundColor = '#28a745';
         botao.style.color = '#fff';
         botao.disabled = true;
@@ -68,7 +72,11 @@ if(formulario){
         setTimeout(() => {
             botao.textContent = textoOriginal;
             botao.style.backgroundColor = '';
+<<<<<<< HEAD
             botao.disabled = false;
+=======
+            botao.style.color = '';
+>>>>>>> d7cefa0fc75b9033544d695162196f6e0b0b6849
         }, 3000);
     });
 }
