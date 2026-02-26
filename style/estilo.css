@@ -250,7 +250,7 @@ box-shadow: 2px 0 5px rgba(0,0,0,0.1);
     .menu-toggle img {
         width: min(100%, 1000px);
         height: auto;
-        border-radius: 25px;
+        border-radius: 30px;
     }
 
     .container-quem-somos{
