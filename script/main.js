@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
 linksMenu.forEach(link => {
     link.addEventListener('click', () => alternarMenu(false));
 })
-
     const animacaoObserver = new IntersectionObserver((entradas) => {
         entradas.forEach((entrada) => {
             if (entrada.isIntersecting) {
@@ -37,7 +36,6 @@ linksMenu.forEach(link => {
     }, { 
         threshold: 0.15
     });
-
     const elementosParaAnimar = document.querySelectorAll('.animate-on-scroll');
     elementosParaAnimar.forEach(elemento => animacaoObserver.observe(elemento));
     const containerObserver = new IntersectionObserver((entradas) => {
@@ -60,7 +58,7 @@ if(formulario){
         const botao = document.querySelector('button[type="submit"]');
         const textoOriginal = botao.textContent;
 
-        botao.textContent = 'Enviando mensagem com sucesso.';
+        botao.textContent = 'Enviada a mensagem com sucesso.';
         botao.style.backgroundColor = '#28a745';
         botao.style.color = '#fff';
         botao.disabled = true;
