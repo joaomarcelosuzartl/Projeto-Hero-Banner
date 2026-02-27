@@ -24,7 +24,7 @@
       <button id="close-menu-btn" class="close-menu-btn" aria-label="Fechar menu">
         &times;
       </button>
-      <img src="/images/herobanner-260w.webp" alt="Logo Menu HeroBanner" class="logo-menu-mobile" width = "260" height="128" decoding="async" />
+      <img src="/images/herobanner-260w.webp" alt="Logo Menu HeroBanner" class="logo-menu-mobile" width = "260" height="128"/>
       <ul class="nav-menu">
         <li><a href="#">Home</a></li>
         <li><a href="#sobre">Sobre</a></li>
@@ -96,10 +96,10 @@
       </article>
       <article class="contato-container animate-on-scroll" id="contato">
         <h2>Entre em Contato</h2>
-        <form class="contato-formulario">
-          <input type="text" placeholder="Seu nome" required />
-          <input type="email" placeholder="Seu email" required />
-          <textarea placeholder="Sua mensagem" required></textarea>
+        <form class="contato-formulario" action="https://formspree.io/f/mkoveokr" method="POST">
+          <input type="text" name ="nome" placeholder="Seu nome" required />
+          <input type="email" name="email" placeholder="Seu email" required />
+          <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
           <button type="submit">Enviar</button>
         </form>
       </article>

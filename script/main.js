@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const menu = document.getElementById('nav-menu');
     const linksMenu = document.querySelectorAll('.nav-menu a');
     const container = document.querySelector('.container-quem-somos');
-
     const alternarMenu = (abrir) => {
         if (abrir) {
             menu.classList.add('ativo');
@@ -62,11 +61,38 @@ if(formulario){
         botao.style.backgroundColor = '#28a745';
         botao.style.color = '#fff';
         botao.disabled = true;
-        formulario.reset();
+        const dadosFormulario = new FormData(formulario);
+        fetch(formulario.action, {
+            method: formulario.method,
+            body: dadosFormulario,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                botao.textContent = 'Mensagem enviada com sucesso!';
+                botao.style.backgroundColor = '#28a745';
+                botao.style.color = '#fff';
+                formulario.reset();
+            } else {
+                botao.textContent = 'Erro ao enviar a mensagem. Tente novamente.';
+                botao.style.backgroundColor = '#dc3545';
+                botao.style.color = '#fff';
+            }
+        })
+        .catch(() => {
+                botao.TextContent = 'Erro de conexão. Tente novamente.';
+                botao.style.backgroundColor = '#dc3545';
+                botao.style.color = '#fff';
+        })
+        .finally(() => {
         setTimeout(() => {
             botao.textContent = textoOriginal;
             botao.style.backgroundColor = '';
+            botao.style.color = '';
             botao.disabled = false;
         }, 3000);
     });
+});
 }
