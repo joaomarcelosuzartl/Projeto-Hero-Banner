@@ -3,7 +3,6 @@ html {
     scroll-padding-top: 80px;
 }
 
-/* Animações e Hover do card de serviço (que não são críticas na carga inicial) */
 .servico {
     transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 0.1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
@@ -13,7 +12,6 @@ html {
     box-shadow: 0 20px 40px rgba(0,0,0,0.8);
 }
 
-/* Menu Lateral Escondido */
 .container-navegacao {
     position: fixed;
     top: 0;
@@ -78,7 +76,6 @@ html {
     margin: 20px auto 30px auto; 
 }
 
-/* Animações de Scroll */
 .animate-on-scroll {
     opacity: 0;
     transform: translateY(30px);
@@ -90,7 +87,6 @@ html {
     transform: translateY(0);
 }
 
-/* Formulário de Contato */
 .contato-container {
     background: #fff;
     padding: 20px;
@@ -160,7 +156,6 @@ html {
     text-align: center;
 }
 
-/* Ajustes de tela específicos do formulário para mobile */
 @media (width < 680px){
     .contato-formulario input, .contato-formulario textarea{
         width: min(100%, 300px);
