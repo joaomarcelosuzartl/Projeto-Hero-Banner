@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1 {
+    position: fixed;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);    
+}
+
+.container-cabecalho {
+    background-color: #fff;
+    padding: 15px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-toggle {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: min(100%, 1000px);
+}
+
+.menu-toggle img {
+    height: 80px;
+    border-radius: 50px;
+}
+
+.hamburguer {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    position: relative;
+    transition: background-color 0.3s ease-in-out;
+    flex-shrink: 0;
+}
+
+.logo-texto {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.hamburguer::before,
+.hamburguer::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    left: 0;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.hamburguer::before {
+    top: -8px; 
+}
+
+.hamburguer::after {
+    top: 8px;
+}
+
+.container-quem-somos {
+    width: min(100%, 1000px);
+    margin: 20px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.servico {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.servico img {
+    width: 250px;
+    height: auto;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+.servico-texto {
+    flex: 1;
+}
+
+@media (width < 680px) {
+    .menu-toggle {
+        justify-content: flex-start; 
+        gap: 15px;
+        width: 100%;
+    }
+    .menu-toggle img {
+        width: min(100%, 1000px);
+        height: auto;
+        border-radius: 30px;
+    }
+    .container-quem-somos {
+        margin: 40px auto; 
+        gap: 30px; 
+    }
+    .servico {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+        text-align: center;
+    }
+    .servico img {
+        margin-bottom: 20px;
+        width: min(100%, 300px);
+    }
+    .servico-texto {
+        font-size: 16px;
+    }
+}
