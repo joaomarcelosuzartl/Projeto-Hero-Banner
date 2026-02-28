@@ -23,7 +23,6 @@ h1{
     overflow: hidden;
     clip: rect(0, 0, 0, 0);    
 }
-
 .container-cabecalho {
     background-color: #fff;
     padding: 15px 20px;
@@ -34,7 +33,6 @@ h1{
     display: flex;
     justify-content: center;
 }
-
 .menu-toggle{
     display: flex;
     align-items: center;
@@ -55,6 +53,7 @@ h1{
   background-color: #333;
   position: relative;
   transition: background-color 0.3s ease-in-out;
+  flex-shrink: 0;
 }
 .logo-texto {
     font-size: 20px;
@@ -89,7 +88,6 @@ z-index: 200;
 padding: 20px;
 box-shadow: 2px 0 5px rgba(0,0,0,0.1);
 }
-
 .container-navegacao.ativo {
     left: 0;
 }
@@ -103,16 +101,13 @@ box-shadow: 2px 0 5px rgba(0,0,0,0.1);
     top: 20px;
     right: 20px;
 }
-
 .nav-menu{
     list-style: none;
     margin-top: 10px;
 }
-
 .nav-menu li{
     margin-bottom: 15px;
 }   
-
 .nav-menu li a{
     color: #fff;
     text-decoration: none;
@@ -140,7 +135,6 @@ box-shadow: 2px 0 5px rgba(0,0,0,0.1);
     flex-direction: column;
     gap: 20px;
 }
-
 .servico {
     display: flex;
     flex-direction: row;
@@ -156,7 +150,6 @@ box-shadow: 2px 0 5px rgba(0,0,0,0.1);
     transform: translateY(-8px) scale(1.01);
     box-shadow: 0 20px 40px rgba(0,0,0,0.8);
 }
-
 .servico img{
     width: 250px;
     height: auto;
@@ -166,13 +159,11 @@ box-shadow: 2px 0 5px rgba(0,0,0,0.1);
 .servico-texto{
     flex: 1;
 }
-
 .animate-on-scroll{
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
-
 .animate-on-scroll.visivel {
     opacity: 1;
     transform: translateY(0);
@@ -201,7 +192,6 @@ box-shadow: 2px 0 5px rgba(0,0,0,0.1);
     width: min(100%, 400px);
     margin: 20px  auto 0;
 }
-
 .contato-formulario input,
 .contato-formulario textarea{
     padding: 15px;
@@ -212,18 +202,15 @@ box-shadow: 2px 0 5px rgba(0,0,0,0.1);
     transition: border-color 0.3s ease;
    font-family: inherit;  
 }
-
 .contato-formulario textarea{
     resize: vertical;
     min-height: 120px;
 }
-
 .contato-formulario input:focus, 
 .contato-formulario textarea:focus{
     border-color: #3498db;
     outline: none;
 }
-
 .contato-formulario button{
     padding: 15px;
     border: none;
