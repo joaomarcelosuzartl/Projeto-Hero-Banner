@@ -15,14 +15,13 @@ body{
     line-height: 1.6;
 }
 h1{
-    position: absolute;
+    position: fixed;
     width: 1px;
     height: 1px;
     padding: 0;
     margin: -1px;
     overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;    
+    clip: rect(0, 0, 0, 0);    
 }
 
 .container-cabecalho {
@@ -57,7 +56,10 @@ h1{
   position: relative;
   transition: background-color 0.3s ease-in-out;
 }
-
+.logo-texto {
+    font-size: 20px;
+    font-weight: bold;
+}
 .hamburguer::before,
 .hamburguer::after {
   content: '';
