@@ -1,97 +1,37 @@
-*{
-
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-html{
+html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
 }
-body{
-    background-color: #f4f4f9;
-    color: #333;
-    line-height: 1.6;
-}
-h1{
-    position: fixed;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);    
-}
-.container-cabecalho {
-    background-color: #fff;
-    padding: 15px 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    display: flex;
-    justify-content: center;
-}
-.menu-toggle{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    width: min(100%, 1000px);
-}
-.menu-toggle img{
-    height: 80px;
-    border-radius: 50px;
-}
-.hamburguer {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background-color: #333;
-  position: relative;
-  transition: background-color 0.3s ease-in-out;
-  flex-shrink: 0;
-}
-.logo-texto {
-    font-size: 20px;
-    font-weight: bold;
-}
-.hamburguer::before,
-.hamburguer::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  background-color: #333;
-  left: 0;
-  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
-}
-.hamburguer::before {
-  top: -8px; 
+
+/* Animações e Hover do card de serviço (que não são críticas na carga inicial) */
+.servico {
+    transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 0.1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.hamburguer::after {
-  top: 8px;
+.servico:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.8);
 }
+
+/* Menu Lateral Escondido */
 .container-navegacao {
-position: fixed;
-top: 0;
-left: -200px;
-width: 150px;
-height: 50vh;
-background-color: #2c3e50;
-transition: left 0.3s ease-in-out;
-z-index: 200;
-padding: 20px;
-box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: -200px;
+    width: 150px;
+    height: 50vh;
+    background-color: #2c3e50;
+    transition: left 0.3s ease-in-out;
+    z-index: 200;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
 }
+
 .container-navegacao.ativo {
     left: 0;
 }
-.close-menu-btn{
+
+.close-menu-btn {
     background: none;
     border: none;
     color: #fff;
@@ -101,74 +41,57 @@ box-shadow: 2px 0 5px rgba(0,0,0,0.1);
     top: 20px;
     right: 20px;
 }
-.nav-menu{
+
+.nav-menu {
     list-style: none;
     margin-top: 10px;
 }
-.nav-menu li{
+
+.nav-menu li {
     margin-bottom: 15px;
 }   
-.nav-menu li a{
+
+.nav-menu li a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s ease;
     display: block;
 }
-.nav-menu li a:hover{
+
+.nav-menu li a:hover {
     color: #3498db;
 }
+
 .nav-menu a:hover,
-.nav-menu a:focus{
+.nav-menu a:focus {
     color: #3498db;
     transform: translateX(10px);
     outline: none;
 }
-.container-quem-somos{
-    width: min(100%, 1000px);
-    /*
-    width: clamp(300px, 100%,1000px);
-    */
-    margin: 20px auto;
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.servico {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-    background: #fff;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 0.1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-.servico:hover {
-    transform: translateY(-8px) scale(1.01);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.8);
-}
-.servico img{
-    width: 250px;
+
+.logo-menu-mobile {
+    display: inline-block;
+    width: 100px;
     height: auto;
-    border-radius: 30px;
-    object-fit: cover;
+    border-radius: 12px;
+    margin: 20px auto 30px auto; 
 }
-.servico-texto{
-    flex: 1;
-}
-.animate-on-scroll{
+
+/* Animações de Scroll */
+.animate-on-scroll {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
+
 .animate-on-scroll.visivel {
     opacity: 1;
     transform: translateY(0);
 }
-.contato-container{
+
+/* Formulário de Contato */
+.contato-container {
     background: #fff;
     padding: 20px;
     border-radius: 12px;
@@ -176,42 +99,47 @@ box-shadow: 2px 0 5px rgba(0,0,0,0.1);
     text-align: center;
 }
 
-.contato-container h2{
+.contato-container h2 {
     color: #2c3e50;
     margin-bottom: 10px;
 }
-.contato-container p{
+
+.contato-container p {
     margin-bottom: 20px;
     color: #666;
 }
 
-.contato-formulario{
+.contato-formulario {
     display: flex;
     flex-direction: column;
     gap: 15px;
     width: min(100%, 400px);
     margin: 20px  auto 0;
 }
+
 .contato-formulario input,
-.contato-formulario textarea{
+.contato-formulario textarea {
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 8px;
     width: min(100%, 1000px);
     font-size: 16px;
     transition: border-color 0.3s ease;
-   font-family: inherit;  
+    font-family: inherit;  
 }
-.contato-formulario textarea{
+
+.contato-formulario textarea {
     resize: vertical;
     min-height: 120px;
 }
+
 .contato-formulario input:focus, 
-.contato-formulario textarea:focus{
+.contato-formulario textarea:focus {
     border-color: #3498db;
     outline: none;
 }
-.contato-formulario button{
+
+.contato-formulario button {
     padding: 15px;
     border: none;
     border-radius: 8px;
@@ -221,75 +149,44 @@ box-shadow: 2px 0 5px rgba(0,0,0,0.1);
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
-.contato-formulario button:hover{
+
+.contato-formulario button:hover {
     background-color: #2980b9;
     transform: translateY(-3px);
 }
-.footer-card{
+
+.footer-card {
     justify-content: center;
     text-align: center;
 }
-.logo-menu-mobile {
-    display: inline-block;
-    width: 100px;
-    height: auto;
-    border-radius: 12px;
-    margin: 20px auto 30px auto; 
-}
 
+/* Ajustes de tela específicos do formulário para mobile */
 @media (width < 680px){
-    .menu-toggle {
-        justify-content: flex-start; 
-        gap: 15px;
-        width: 100%;
-    }
-    .menu-toggle img {
-        width: min(100%, 1000px);
-        height: auto;
-        border-radius: 30px;
-    }
-
-    .container-quem-somos{
-        margin: 40px auto; 
-        gap: 30px; 
-    }
-    .servico{
-        flex-direction: column;
-        align-items: center;
-        padding: 30px 20px;
-        text-align: center;
-    }
-    .servico img{
-        margin-bottom: 20px;
-        width: min(100%, 300px);
-    }
-    .servico-texto{
-        font-size: 16px;
-    }
     .contato-formulario input, .contato-formulario textarea{
         width: min(100%, 300px);
     }
 }
 
+/* Desktop */
 @media (min-width: 680px){
-    .container-cabecalho{
+    .container-cabecalho {
         display: flex;
         justify-content: space-between; 
         align-items: center;
         padding-left: max(20px, calc((100vw - 1000px) / 2));
         padding-right: max(20px, calc((100vw - 1000px) / 2));
     }
-    .hamburguer, .close-menu-btn{
+    .hamburguer, .close-menu-btn {
         display: none;
     }
-    .menu-toggle{
+    .menu-toggle {
         width: auto; 
         cursor: default;
     }
-    .logo-menu-mobile{
+    .logo-menu-mobile {
         display: none;
     }
-    .container-navegacao{
+    .container-navegacao {
         position: static;
         width: auto;
         height: auto;
@@ -297,7 +194,7 @@ box-shadow: 2px 0 5px rgba(0,0,0,0.1);
         box-shadow: none;
         padding: 0;
     }
-    .nav-menu{
+    .nav-menu {
         display: flex;
         gap: 40px; 
         margin-top: 0;
@@ -306,7 +203,7 @@ box-shadow: 2px 0 5px rgba(0,0,0,0.1);
     .nav-menu li {
         margin-bottom: 0; 
     }
-    .nav-menu li a{
+    .nav-menu li a {
         color: #2c3e50;
         font-weight: bold;
         font-size: 18px;
